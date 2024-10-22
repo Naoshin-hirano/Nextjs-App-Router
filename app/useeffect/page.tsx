@@ -4,6 +4,12 @@ import React, { useEffect, useState } from "react";
 export default function UseEffect() {
     const [count, setCount] = useState(0);
     const [state, setState] = useState(0);
+    const [flag, setFlag] = useState(false);
+
+    useEffect(() => {
+        // setstateを依存配列に入れてもなにも起こらない
+        console.log("setFlagを依存配列に入れているときに実行");
+    }, [setFlag]);
 
     useEffect(() => {
         // setstateを依存配列に入れてもなにも起こらない
@@ -39,11 +45,15 @@ export default function UseEffect() {
                 <button onClick={() => setCount(count + 1)}>
                     カウントアップ
                 </button>
-                <h2>{count}</h2>
                 <button onClick={() => setState(state + 1)}>
                     ステートアップ
                 </button>
+                <h2>{count}</h2>
                 <h2>{state}</h2>
+                <button onClick={() => setFlag((prevState) => !prevState)}>
+                    フラグ
+                </button>
+                <h3>{flag ? "TRUE" : "FALSE"}</h3>
             </div>
         </div>
     );

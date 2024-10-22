@@ -31,6 +31,7 @@ export default function RootLayout({
                     <Link href="/">Home</Link>
                     <Link href="/new">新規作成</Link>
                     <Link href="/useeffect">useEffect</Link>
+                    <Link href="/usecallback">useCallback</Link>
                 </nav>
                 {children}
             </body>
