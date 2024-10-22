@@ -30,7 +30,7 @@ export default function RootLayout({
                 <nav>
                     <Link href="/">Home</Link>
                     <Link href="/new">新規作成</Link>
-                    <Link href="/test">テスト用</Link>
+                    <Link href="/useeffect">useEffect</Link>
                 </nav>
                 {children}
             </body>
